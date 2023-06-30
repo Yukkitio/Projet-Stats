@@ -1,0 +1,24 @@
+[{
+    "id": 1,
+    "image": "https://picsum.photos/500/300/?image=10",
+    "title": "Jeu 1",
+    "description": "Description du jeu 1"
+},
+{
+    "id": 2,
+    "image": "https://picsum.photos/500/300/?image=10",
+    "title": "Jeu 2",
+    "description": "Description du jeu 2"
+},
+{
+    "id": 3,
+    "image": "https://picsum.photos/500/300/?image=10",
+    "title": "Jeu 3",
+    "description": "Description du jeu 3"
+},
+{
+    "id": 4,
+    "image": "https://picsum.photos/500/300/?image=10",
+    "title": "Jeu 4",
+    "description": "Description du jeu 4"
+}] 

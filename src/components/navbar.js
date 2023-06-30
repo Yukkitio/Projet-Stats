@@ -4,9 +4,8 @@ import "./Navbar.css";
 
 import { BsFillPentagonFill } from "react-icons/bs";
 import { BsPersonFill } from "react-icons/bs";
-import { BsPerson } from "react-icons/bs";
-
-import { BsPersonSquare } from "react-icons/bs";
+// import { BsPerson } from "react-icons/bs";
+// import { BsPersonSquare } from "react-icons/bs";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import { NavLink } from "react-router-dom";

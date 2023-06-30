@@ -39,7 +39,7 @@ export default function Login() {
         </form>
 
         <p className="login-link">
-          <a href="#">Forgot Password ?</a>
+          <a href="/homepage/game-stats">Forgot Password ?</a>
         </p>
         <p className="login-link">
           <a href="/homepage/game-stats">Log As Guest</a>

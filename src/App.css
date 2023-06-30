@@ -174,16 +174,23 @@
   }
 }
 
-/* CARD DESIGN */
-.main{
-  max-width: 1200px;
-  margin: 0 auto;
+/* GAME STATS PAGE */
+
+.main_game_stats_body{
+  background-color: #282828;
 }
+
+/* SEARCH BAR */
+.search {
+  padding: 3vh;
+}
+
+/* CARD DESIGN */
 
 h1 {
     font-size: 24px;
-    font-weight: 400;
     text-align: center;
+    padding: 3vh;
 }
 
 img {
@@ -210,7 +217,7 @@ img {
   background-color: rgba(255, 255, 255, 0.12);
 }
 
-.cards {
+.cards_list {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -219,8 +226,8 @@ img {
 }
 
 .cards_item {
-  padding: 1rem;
-}
+  padding: 3vh;
+  }
 
 @media (min-width: 40rem) {
   .cards_item {
@@ -234,9 +241,9 @@ img {
   }
 }
 
-.card {
+.card_container {
   background-color: white;
-  border-radius: 0.25rem;
+  border-radius: 2vh;
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;

@@ -1,8 +1,5 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-
-import Navbar from "../../components/navbar";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import ErrorPage from "../../pages/error_ui";
 import Login from "../../pages/login_ui";
