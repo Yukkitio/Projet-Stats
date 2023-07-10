@@ -1,77 +1,43 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./Navbar.css";
+import * as React from 'react';
+import { AppBar, Toolbar, Typography, Button, IconButton, Avatar, Box } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
-import { BsFillPentagonFill } from "react-icons/bs";
-import { BsPersonFill } from "react-icons/bs";
-// import { BsPerson } from "react-icons/bs";
-// import { BsPersonSquare } from "react-icons/bs";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { IconContext } from "react-icons/lib";
-import { NavLink } from "react-router-dom";
-
-function Navbar() {
-  const [click, setClick] = useState(false);
-
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
-
+export default function Navbar() {
   return (
-    <>
-      <IconContext.Provider value={{ color: "#fff" }}>
-        <nav className="navbar">
-          <div className="navbar-container container">
-            <Link to="../homepage/game-stats" className="navbar-logo" onClick={closeMobileMenu}>
-              <BsFillPentagonFill className="navbar-icon" />
-              Projet Stats
-            </Link>
-            <div className="menu-icon" onClick={handleClick}>
-              {click ? <FaTimes /> : <FaBars />}
-            </div>
-            <ul className={click ? "nav-menu active" : "nav-menu"}>
-{/* -------------------------------------------------------------------------------- */}
-              <li className="nav-item">
-                <NavLink
-                  to="../homepage/game-stats"
-                  className={({ isActive }) =>
-                    "nav-links" + (isActive ? " activated" : "")
-                  }
-                  onClick={closeMobileMenu}
-                >
-                  Game Stats
-                </NavLink>
-              </li>
-{/* -------------------------------------------------------------------------------- */}
-              <li className="nav-item">
-                <NavLink
-                  to="../homepage/tournement-creator"
-                  className={({ isActive }) =>
-                    "nav-links" + (isActive ? " activated" : "")
-                  }
-                  onClick={closeMobileMenu}
-                >
-                  Tournement Creator
-                </NavLink>
-              </li>
-{/* -------------------------------------------------------------------------------- */}
-              <li className="nav-item">
-                <NavLink
-                  to="../homepage/account"
-                  className={({ isActive }) =>
-                    "nav-links" + (isActive ? " activated" : "")
-                  }
-                  onClick={closeMobileMenu}
-                >
-                  <BsPersonFill className="navbar-icon" />
-                </NavLink>
-              </li>
+    <AppBar position="static">
+      <Toolbar>
+        {/* Logo du site */}
+        <IconButton edge="start" color="inherit" aria-label="menu">
+          <MenuIcon />
+        </IconButton>
 
-            </ul>
-          </div>
-        </nav>
-      </IconContext.Provider>
-    </>
+        {/* Nom du site */}
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          Mon Site
+        </Typography>
+
+        {/* Espace flexible pour centrer les onglets */}
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            width: '100%',
+            position: 'absolute',
+            left: '50%',
+            transform: 'translateX(-50%)',
+          }}
+        >
+          {/* Onglets */}
+          <Button color="inherit">Onglet 1</Button>
+          <Button color="inherit">Onglet 2</Button>
+        </Box>
+
+        {/* Icône de profil */}
+        <IconButton color="inherit" aria-label="profile">
+          <AccountCircleIcon />
+        </IconButton>
+      </Toolbar>
+    </AppBar>
   );
 }
-
-export default Navbar;

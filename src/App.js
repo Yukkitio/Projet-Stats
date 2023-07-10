@@ -1,13 +1,24 @@
-import React from "react";
-import './App.css';
-import Router from './shared/navigation/browser_router';
+import * as React from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
-function App() {
+// Import des pages
+import Login from './pages/login';
+import GameStats from './pages/gamestats';
+import Tourement from './pages/tournement';
+import Account from './pages/account';
+
+// Import des components
+import Navbar from './components/navbar';
+
+export default function App() {
   return (
-    <div className="App">
-      <Router />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/gamestats" element={<GameStats />} />
+        <Route path="/tourement" element={<Tourement />} />
+        <Route path="/account" element={<Account />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
