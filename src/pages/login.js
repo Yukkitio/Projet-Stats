@@ -1,35 +1,45 @@
+import * as React from 'react';
+import { Container, TextField, Box, Typography, Button, InputAdornment } from '@mui/material';
+import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
+
+//Import des icones
+import LockOpenOutlinedIcon from '@mui/icons-material/LockOpenOutlined';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import KeyIcon from '@mui/icons-material/Key';
+//Import du css (background)
 import '../App.css';
+
+//Import du background
 import BackgroundLogin from '../components/background';
 
-import { Container } from '@mui/material';
-import TextField from '@mui/material/TextField';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import LockOpenOutlinedIcon from '@mui/icons-material/LockOpenOutlined';
-import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
+export default function Login({ onLogin }) {
+  const navigate = useNavigate();
 
-import { Navigate } from 'react-router-dom';
+  // const [email, setEmail] = React.useState('');
+  // const [password, setPassword] = React.useState('');
 
-
-export default function Login({handleAuthentication}) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const email = data.get('email');
     const password = data.get('password');
-
     console.log({
       email: data.get('email'),
       password: data.get('password'),
     });
-
-    // Vérification des informations d'identification
     if (email === 'admin' && password === 'admin') {
-      <Navigate to="/gamestats" replace />
+      onLogin(); // Appel de la fonction de connexion réussie depuis le composant parent
+      navigate('/app/gamestats'); // Redirection vers /app/gamestats si les informations sont correctes
     } else {
-      alert('Identifiants incorrects');
+      alert('Identifiants invalides');
     }
+  };
+
+  const handleSubmitInvite = (event) => {
+    event.preventDefault();
+    onLogin();
+    navigate('/app/gamestats');
   };
 
   const customTheme = (outerTheme) =>
@@ -110,8 +120,22 @@ export default function Login({handleAuthentication}) {
         <Box component='form' onSubmit={handleSubmit} noValidate sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
           <ThemeProvider theme={customTheme(useTheme)}>
-            <TextField id='email' margin='normal' fullWidth label='Email' name='email' variant="filled"/>
-            <TextField id='password' margin='normal' fullWidth label='Mot de passe' name='password' type='password' variant="filled"/>
+            <TextField id='email' margin='normal' fullWidth label='Email' name='email' variant="filled"
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <AlternateEmailIcon fontSize="small" style={{ color: 'grey' }} />
+                  </InputAdornment>
+                ),
+              }}/>
+            <TextField id='password' margin='normal' fullWidth label='Mot de passe' name='password' type='password' variant="filled" 
+              InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <KeyIcon fontSize="small" style={{ color: 'grey' }} />
+                </InputAdornment>
+              ),
+            }}/>
           </ThemeProvider>
 
           <Button type='submit' variant='contained' sx={{ mt: 2, mb: 1, borderRadius: '4vh', backgroundColor: "#686ffd" }} endIcon={<LockOpenOutlinedIcon />}>S'authentifier</Button>
@@ -119,7 +143,7 @@ export default function Login({handleAuthentication}) {
         </Box>
 
         <Button variant='text' size='small'sx={{ color: '#686ffd' }} disabled>Mot de passe oublié ?</Button>
-        <Button variant='text' sx={{ mt: 2, mb: 2 , color: '#686ffd' }} size='small'>Invité</Button>
+        <Button variant='text' sx={{ mt: 2, mb: 2 , color: '#686ffd' }} size='small' onClick={handleSubmitInvite} >Invité</Button>
         
       </Box>
 

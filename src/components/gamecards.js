@@ -1,15 +1,13 @@
 import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions, IconButton, Box, Snackbar } from '@mui/material';
-import Grid from '@mui/material/Grid';
-import { Alert } from '@mui/material';
+import { Card ,CardContent, CardMedia, CardActions } from '@mui/material';
+import { Typography, Button, IconButton, Box, Snackbar, Grid, Alert } from '@mui/material';
+
+// Import des icones
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import CloseIcon from '@mui/icons-material/Close';
 
+// Import du JSON contenant les infos des jeux
 import data from "./ListData.json"
 
 export default function GameCards({ filteredTerm }) {
