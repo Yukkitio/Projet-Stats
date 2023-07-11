@@ -13,7 +13,7 @@ import '../App.css';
 //Import du background
 import BackgroundLogin from '../components/background';
 
-export default function Login({ onLogin }) {
+export default function Login() {
   const navigate = useNavigate();
 
   // const [email, setEmail] = React.useState('');
@@ -29,7 +29,6 @@ export default function Login({ onLogin }) {
       password: data.get('password'),
     });
     if (email === 'admin' && password === 'admin') {
-      onLogin(); // Appel de la fonction de connexion réussie depuis le composant parent
       navigate('/app/gamestats'); // Redirection vers /app/gamestats si les informations sont correctes
     } else {
       alert('Identifiants invalides');
@@ -38,7 +37,6 @@ export default function Login({ onLogin }) {
 
   const handleSubmitInvite = (event) => {
     event.preventDefault();
-    onLogin();
     navigate('/app/gamestats');
   };
 
