@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import SearchBar from '../components/searchbar';
-import GameCards from '../components/gamecards';
+import SearchBar from "../components/searchbar";
+import GameCards from "../components/gamecards";
+import { Outlet } from "react-router-dom";
 
 export default function GameStats() {
   const [filteredTerm, setFilteredTerm] = useState("");
@@ -9,11 +10,12 @@ export default function GameStats() {
     setFilteredTerm(term);
   };
   return (
-      <>
-      <SearchBar onSearch={handleSearch}/>
-      <div style={{padding: '2%'}}>
-        <GameCards filteredTerm={filteredTerm}/>
+    <div>
+      <SearchBar onSearch={handleSearch} />
+      <div style={{ padding: "2%" }}>
+        <GameCards filteredTerm={filteredTerm} />
       </div>
-      </>
+      <Outlet />
+    </div>
   );
 }
