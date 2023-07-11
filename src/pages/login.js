@@ -26,7 +26,7 @@ export default function Login() {
 
     // Vérification des informations d'identification
     if (email === "admin" && password === "admin") {
-      navigate("/gamestats");
+      navigate("/homepage/gamestats");
     } else {
       alert("Identifiants incorrects");
     }
