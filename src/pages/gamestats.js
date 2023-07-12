@@ -14,13 +14,10 @@ export default function GameStats() {
     setFilteredTerm(term);
   };
   return (
-    // <div style={{backgroundColor: '#282828'}}>
-      <><SearchBar onSearch={handleSearch}/>
-      <div style={{padding: '2%'}}>
-        <GameCards filteredTerm={filteredTerm}/>
-      </div>
-      <BackgroundLogin /></>
-    // </div>
-   
+    <React.Fragment>
+      <SearchBar onSearch={handleSearch}/>
+      <GameCards filteredTerm={filteredTerm}/>
+      <BackgroundLogin />
+    </React.Fragment>   
   );
 }
