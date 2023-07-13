@@ -119,23 +119,23 @@ export default function GameCards({ filteredTerm }) {
 
               {/* BOUTON AJOUT FAVORI */}
               <IconButton
-  onClick={() => handleBookmarkClick(game.id)}
-  sx={{
-    position: 'absolute',
-    top: '3%',
-    right: 0,
-    color: isCardBookmarked(game.id) ? 'white' : 'inherit',
-    borderRadius: '50% 0 0 50%', // Coins arrondis supérieur gauche et inférieur gauche
-    borderTop: '1px solid #686ffd', // Bordures grises
-    borderBottom: '1px solid #686ffd', // Bordures grises
-    backgroundColor: '#0A0A0A', // Fond rouge
-    '&:hover': {
-      backgroundColor: 'grey',
-    }
-  }}
->
-  {isCardBookmarked(game.id) ? <BookmarkIcon /> : <BookmarkBorderIcon />}
-</IconButton>
+                onClick={() => handleBookmarkClick(game.id)}
+                sx={{
+                  position: 'absolute',
+                  top: '3%',
+                  right: 0,
+                  color: isCardBookmarked(game.id) ? 'white' : 'inherit',
+                  borderRadius: '50% 0 0 50%', // Coins arrondis supérieur gauche et inférieur gauche
+                  borderTop: '1px solid #686ffd', // Bordures grises
+                  borderBottom: '1px solid #686ffd', // Bordures grises
+                  backgroundColor: '#0A0A0A', // Fond rouge
+                  '&:hover': {
+                    backgroundColor: 'grey',
+                  }
+                }}
+              >
+                {isCardBookmarked(game.id) ? <BookmarkIcon fontSize="small" /> : <BookmarkBorderIcon fontSize="small" />}
+              </IconButton>
 
               <Box
                 component="span"
