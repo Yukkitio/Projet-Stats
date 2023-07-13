@@ -1,7 +1,13 @@
 import React from "react";
 
-export default function Tourement() {
+//Import du background
+import BackgroundLogin from '../components/background';
+
+export default function Tournement() {
   return (
-    <p>Tourement</p>
+    <React.Fragment>
+      <p>Tourement</p>
+      <BackgroundLogin />
+    </React.Fragment>
   );
 }

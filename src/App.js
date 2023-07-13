@@ -8,9 +8,10 @@ import {
 // Import des pages
 import Login from "./pages/login";
 import GameStats from "./pages/gamestats";
-import Tourement from "./pages/tournement";
+import Tournement from "./pages/tournement";
 import Account from "./pages/account";
 import Navbar from "./components/navbar";
+import GameInfos from './pages/gameinfos';
 
 export default function App() {
   return (
@@ -19,7 +20,8 @@ export default function App() {
         <Route path="/" element={<Login />} />
         <Route path="/app" element={<Navbar />}>
           <Route path="gamestats" element={<GameStats />} />
-          <Route path="tourement" element={<Tourement />} />
+          <Route path="gameinfos" element={<GameInfos />} />
+          <Route path="tournement" element={<Tournement />} />
           <Route path="account" element={<Account />} />
         </Route>
       </Routes>
