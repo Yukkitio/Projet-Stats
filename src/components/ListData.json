@@ -2,47 +2,55 @@
     "id": 1,
     "title": "ARK: Survival Evolved",
     "image": "https://media.rawg.io/media/games/58a/58ac7f6569259dcc0b60b921869b19fc.jpg",
-    "description": "Description du jeu"
+    "description": "Description du jeu",
+    "serverStatus": "offline"
 },
 {
     "id": 2,
     "title": "The Legend of Zelda: Tears of the Kingdom",
     "image": "https://media.rawg.io/media/games/556/55684bfd048706f4266d331d70050b37.jpg",
-    "description": "Description du jeu"
+    "description": "Description du jeu",
+    "serverStatus": "maintenance"
 },
 {
     "id": 3,
     "title": "Vampire: The Masquerade - Bloodlines 2",
     "image": "https://media.rawg.io/media/games/fb5/fb5e0fdb1f6bb0e8b5da5d08bb83a5fc.jpg",
-    "description": "Description du jeu"
+    "description": "Description du jeu",
+    "serverStatus": "online"
 },
 {
     "id": 4,
     "title": "Diablo IV",
     "image": "https://media.rawg.io/media/games/77d/77d51f8f4a07c3eecb0f8504027b1bf0.jpg",
-    "description": "Description du jeu"
+    "description": "Description du jeu",
+    "serverStatus": "maintenance"
 },
 {
     "id": 5,
     "title": "Star Wars Jedi: Survivor",
     "image": "https://media.rawg.io/media/games/3e4/3e43e29ae126ef951842393f5ff7f33a.jpg",
-    "description": "Description du jeu"
+    "description": "Description du jeu",
+    "serverStatus": "online"
 },
 {
     "id": 6,
     "title": "Final Fantasy XVI",
     "image": "https://media.rawg.io/media/games/22e/22e68bb62b3013283972cecf98ed51dc.jpg",
-    "description": "Description du jeu"
+    "description": "Description du jeu",
+    "serverStatus": "maintenance"
 },
 {
     "id": 7,
     "title": "Hollow Knight: Silksong",
     "image": "https://media.rawg.io/media/games/27c/27cd8b7dead05a870f8a514a9a1915ad.jpg",
-    "description": "Description du jeu"
+    "description": "Description du jeu",
+    "serverStatus": "online"
 },
 {
     "id": 8,
     "title": "Minecraft Legends",
     "image": "https://media.rawg.io/media/games/a52/a52652c3f5e666bf0c16797ba175b034.jpg",
-    "description": "Description du jeu"
+    "description": "Description du jeu",
+    "serverStatus": "offline"
 }]

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { AppBar, Toolbar, Typography, Button, IconButton, Avatar, Box, SwipeableDrawer, List, ListItem, ListItemText, useMediaQuery } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, IconButton, Box, SwipeableDrawer, List, ListItem, ListItemText, useMediaQuery } from '@mui/material';
 import { styled } from '@mui/system';
 import ChangeHistoryIcon from '@mui/icons-material/ChangeHistory';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -65,7 +65,7 @@ export default function Navbar() {
 
           {/* Nom du site */}
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} onClick={handleLogoClick}>
-            Mon Site
+            G S T
           </Typography>
 
           {/* Boutons (affichés uniquement sur les grands écrans) */}
