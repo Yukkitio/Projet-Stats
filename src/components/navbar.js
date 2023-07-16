@@ -1,10 +1,12 @@
 import * as React from 'react';
-import { AppBar, Toolbar, Typography, Button, IconButton, Box, SwipeableDrawer, List, ListItem, ListItemText, useMediaQuery } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, IconButton, Box, SwipeableDrawer, List, ListItem, ListItemText, useMediaQuery, Divider } from '@mui/material';
 import { styled } from '@mui/system';
+import { Outlet, useNavigate } from 'react-router-dom';
+
+// Import des icones
 import ChangeHistoryIcon from '@mui/icons-material/ChangeHistory';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Outlet, useNavigate } from 'react-router-dom';
 
 // Style personnalisé pour la barre de navigation
 const StyledAppBar = styled(AppBar)`
@@ -80,10 +82,11 @@ export default function Navbar() {
                 transform: 'translateX(-50%)',
               }}
             >
-              <StyledButton color="inherit" onClick={handleTab1Click} sx={{ paddingRight: 5 }}>
+              <StyledButton color="inherit" onClick={handleTab1Click} sx={{ marginRight: 5 }}>
                 Game Stats
               </StyledButton>
-              <StyledButton color="inherit" onClick={handleTab2Click} sx={{ paddingLeft: 5 }}>
+              <Divider orientation="vertical" flexItem color="grey"/>
+              <StyledButton color="inherit" onClick={handleTab2Click} sx={{ marginLeft: 5 }}>
                 Tournament
               </StyledButton>
             </Box>
@@ -108,6 +111,7 @@ export default function Navbar() {
             <ListItem button onClick={handleTab1Click}>
               <ListItemText primary="Game Stats" />
             </ListItem>
+            <Divider flexItem color="#282828"/>
             <ListItem button onClick={handleTab2Click}>
               <ListItemText primary="Tournament" />
             </ListItem>

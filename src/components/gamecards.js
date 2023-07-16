@@ -21,14 +21,13 @@ export default function GameCards({ filteredTerm }) {
   const [isBoxExpanded, setIsBoxExpanded] = useState(false);
   const navigate = useNavigate();
 
+  // Effet de chargement initial
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsBoxExpanded(true);
-    }, 500); // Délai avant d'expanser la barre oblique (en millisecondes)
-    
+    const timer = setTimeout(() => { setIsBoxExpanded(true); }, 500); // Délai avant d'expanser la barre oblique (en millisecondes)  
     return () => clearTimeout(timer); // Nettoyage du timer lorsque le composant est démonté
   }, []);
 
+  // Ajout d'une notification à la file d'attente
   const enqueueSnackbar = (message, severity) => {
     const snackbar = {
       message,
@@ -38,27 +37,30 @@ export default function GameCards({ filteredTerm }) {
     setSnackbarQueue((prevQueue) => [...prevQueue, snackbar]);
   };
 
+  // Fermeture de la notification
   const closeSnackbar = (key) => {
     setSnackbarQueue((prevQueue) => prevQueue.filter((snackbar) => snackbar.key !== key));
   };
 
+  // Gestion du clic sur le bouton de favori
   const handleBookmarkClick = (cardId) => {
     if (bookmarkedCards.includes(cardId)) {
-      // Remove from bookmarks
+      // Supprimer des favoris
       setBookmarkedCards(bookmarkedCards.filter((id) => id !== cardId));
       enqueueSnackbar('Card removed from bookmarks', 'warning');
     } else {
-      // Add to bookmarks
+      // Ajouter aux favoris
       setBookmarkedCards([...bookmarkedCards, cardId]);
       enqueueSnackbar('Card added to bookmarks', 'success');
     }
   };
 
+  // Vérifier si la carte est dans les favoris
   const isCardBookmarked = (cardId) => {
     return bookmarkedCards.includes(cardId);
   };
 
-  // Gestion icone des états des serveurs
+  // Récupérer l'icône de l'état du serveur
   const getServerIcon = (status) => {
     switch (status) {
       case 'maintenance':
@@ -68,10 +70,11 @@ export default function GameCards({ filteredTerm }) {
       case 'online':
         return <Tooltip title="Online"><CheckCircleTwoToneIcon fontSize="small" sx={{ color: 'green' }} /></Tooltip>;
       default:
-        return <Tooltip title="Uknown Status"><ErrorTwoToneIcon fontSize="small" sx={{ color: 'green' }} /></Tooltip>;
+        return <Tooltip title="Unknown Status"><ErrorTwoToneIcon fontSize="small" sx={{ color: 'green' }} /></Tooltip>;
     }
   };
 
+  // Gestion du clic sur la carte
   const handleCardClick = (cardId) => {
     const selectedGame = data.find((game) => game.id === cardId);
     if (selectedGame) {
@@ -79,14 +82,26 @@ export default function GameCards({ filteredTerm }) {
     }
   };
 
+  // Gestion du survol de la carte (entrée)
   const handleCardMouseEnter = (e) => {
     e.currentTarget.style.transform = 'translateY(-5px)';
-    e.currentTarget.style.boxShadow = '0px 0px 8px 6px rgba(104,111,253,0.8)';
+    e.currentTarget.style.boxShadow = '0px 0px 8px 6px rgba(104, 111, 253, 0.8)';
+    const icon = e.currentTarget.querySelector('.slide-icon');
+    if (icon && !icon.classList.contains('bookmark-icon')) {
+      icon.style.opacity = '1';
+      icon.style.transform = 'translateX(0)';
+    }
   };
   
+  // Gestion du survol de la carte (sortie)
   const handleCardMouseLeave = (e) => {
     e.currentTarget.style.transform = '';
     e.currentTarget.style.boxShadow = '';
+    const icon = e.currentTarget.querySelector('.slide-icon');
+    if (icon && !icon.classList.contains('bookmark-icon')) {
+      icon.style.opacity = '0';
+      icon.style.transform = 'translateX(100%)';
+    }
   };
   
 
@@ -113,13 +128,19 @@ export default function GameCards({ filteredTerm }) {
                   pointerEvents: 'none',
                   objectFit: 'cover',
                   objectPosition: 'center',
-                  height: '200px', // Ajustez la hauteur souhaitée de CardMedia
+                  height: '200px', // La hauteur souhaitée de CardMedia
                 }}
               />
 
               {/* BOUTON AJOUT FAVORI */}
               <IconButton
                 onClick={() => handleBookmarkClick(game.id)}
+                className={`slide-icon ${isCardBookmarked(game.id) ? 'bookmark-icon' : ''}`}
+                style={{
+                  opacity: isCardBookmarked(game.id) ? '1' : '0',
+                  transform: isCardBookmarked(game.id) ? 'translateX(0)' : 'translateX(100%)',
+                  transition: 'opacity 0.3s ease, transform 0.3s ease',
+                }}
                 sx={{
                   position: 'absolute',
                   top: '3%',
