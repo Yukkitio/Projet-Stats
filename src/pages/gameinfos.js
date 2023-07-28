@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { CardMedia, Box, Tooltip } from '@mui/material';
+import { CardMedia, Box, Tooltip, Stack, Divider } from '@mui/material';
 import { LineChart } from '@mui/x-charts/LineChart';
 
 // Import des icones
@@ -35,6 +35,25 @@ export default function GameInfos() {
     }
   };
 
+  const graph = (color) => {
+    return <LineChart
+    xAxis={[
+      {
+        data: [1, 2, 3, 5, 8, 10]
+      }
+    ]}
+    series={[
+      {
+        data: [2, 5.5, 2, 8.5, 1.5, 5],
+        area: true,
+        color
+      },
+    ]}
+    width={600}
+    height={250}
+    />;
+  };
+
   return (
     <React.Fragment>
         <Box sx={{ position: 'relative' }}>
@@ -57,31 +76,46 @@ export default function GameInfos() {
               height: isBoxExpanded ? '12%' : '0',
               clipPath: 'polygon(100% 0, 100% 100%, 0 100%)',
               backgroundColor: 'grey',
-              cursor: 'pointer',
               transition: 'height 0.3s ease', // Animation de transition de la hauteur
               marginBottom: '-1px', // Ajouter une marge négative pour pallier au liseré non responsive
               marginLeft: '1px', // Ajouter une marge négative pour pallier au liseré non responsive
             }} />
         </Box>
 
-        <h1>{game.title}</h1>
+        <Box sx={{ position: 'absolute', backgroundColor: 'grey', margin: '4vh'}}>
+          <Box sx={{
+            backgroundColor: 'green',
+            marginBottom: '1vh',
+          }}>
+            <h1>{game.title}</h1>
+          </Box>
 
-        <p>{game.description}</p>
+          <Box sx={{
+            backgroundColor: 'red',
+            margin: '2vh',
+          }}>
+            <p>{game.description}</p>
+          </Box>  
+          
+          <Stack
+            direction="row"
+            justifyContent="space-evenly"
+            alignItems="center"
+            divider={<Divider orientation="vertical" flexItem color="grey"/>}
+          >
+            <Box>
+              <h1>Graphique nb joueur</h1>
+              {graph("blue")} {/* Graphique nb joueur */}
+            </Box>
+            <Box>
+              <h1>Graphique etat serveur</h1>
+              {getServerIcon(game.serverStatus)} {/* Icone état serveur */}
+              {graph("green")} {/* Graphique etat serveur */}
+            </Box>
+          </Stack>
 
-        {getServerIcon(game.serverStatus)} {/* Icone état serveur */}
-
-        <LineChart
-          xAxis={[{ data: [1, 2, 3, 5, 8, 10] }]}
-          series={[
-            {
-              data: [2, 5.5, 2, 8.5, 1.5, 5],
-              area: true,
-            },
-          ]}
-          width={500}
-          height={300}
-        />
-
+          <h1>Liste prérequis steam</h1>
+        </Box>
       <BackgroundLogin />
     </React.Fragment>
   );
