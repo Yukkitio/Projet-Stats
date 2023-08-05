@@ -1,56 +1,123 @@
-[{
-    "id": 1,
-    "title": "ARK: Survival Evolved",
-    "image": "https://media.rawg.io/media/games/58a/58ac7f6569259dcc0b60b921869b19fc.jpg",
-    "description": "Description du jeu",
-    "serverStatus": "offline"
-},
-{
-    "id": 2,
-    "title": "The Legend of Zelda: Tears of the Kingdom",
-    "image": "https://media.rawg.io/media/games/556/55684bfd048706f4266d331d70050b37.jpg",
-    "description": "Description du jeu",
-    "serverStatus": "maintenance"
-},
-{
-    "id": 3,
-    "title": "Vampire: The Masquerade - Bloodlines 2",
-    "image": "https://media.rawg.io/media/games/fb5/fb5e0fdb1f6bb0e8b5da5d08bb83a5fc.jpg",
-    "description": "Description du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeuDescription du jeu",
-    "serverStatus": "online"
-},
-{
-    "id": 4,
-    "title": "Diablo IV",
-    "image": "https://media.rawg.io/media/games/77d/77d51f8f4a07c3eecb0f8504027b1bf0.jpg",
-    "description": "Description du jeu",
-    "serverStatus": "maintenance"
-},
-{
-    "id": 5,
-    "title": "Star Wars Jedi: Survivor",
-    "image": "https://media.rawg.io/media/games/3e4/3e43e29ae126ef951842393f5ff7f33a.jpg",
-    "description": "Description du jeu",
-    "serverStatus": "online"
-},
-{
-    "id": 6,
-    "title": "Final Fantasy XVI",
-    "image": "https://media.rawg.io/media/games/22e/22e68bb62b3013283972cecf98ed51dc.jpg",
-    "description": "Description du jeu",
-    "serverStatus": "maintenance"
-},
-{
-    "id": 7,
-    "title": "Hollow Knight: Silksong",
-    "image": "https://media.rawg.io/media/games/27c/27cd8b7dead05a870f8a514a9a1915ad.jpg",
-    "description": "Description du jeu",
-    "serverStatus": "online"
-},
-{
-    "id": 8,
-    "title": "Minecraft Legends",
-    "image": "https://media.rawg.io/media/games/a52/a52652c3f5e666bf0c16797ba175b034.jpg",
-    "description": "Description du jeu",
-    "serverStatus": "offline"
-}]
+[
+    {
+      "id": 1,
+      "title": "ARK: Survival Evolved",
+      "image": "https://media.rawg.io/media/games/58a/58ac7f6569259dcc0b60b921869b19fc.jpg",
+      "description": "ARK: Survival Evolved est un jeu vidéo d'action-aventure et de survie développé et publié par Studio Wildcard. Dans ce jeu, les joueurs doivent survivre sur une île remplie de dinosaures et autres créatures préhistoriques. Ils devront chasser, récolter des ressources, construire des abris et former des tribus pour survivre dans ce monde dangereux. Le jeu propose également un mode multijoueur où les joueurs peuvent coopérer pour surmonter les défis et explorer l'île ensemble.",
+      "serverStatus": "offline",
+      "playerData": {
+        "time": [1, 2, 3, 5, 8, 10],
+        "players": [100, 150, 200, 180, 220, 250]
+      },
+      "crashData": {
+        "time": [1, 2, 3, 5, 8, 10],
+        "reports": [2, 5, 3, 8, 1, 5]
+      }
+    },
+    {
+      "id": 2,
+      "title": "The Legend of Zelda: Tears of the Kingdom",
+      "image": "https://media.rawg.io/media/games/556/55684bfd048706f4266d331d70050b37.jpg",
+      "description": "The Legend of Zelda: Tears of the Kingdom est un jeu d'action-aventure développé et publié par Nintendo. Le jeu met en scène le célèbre héros Link alors qu'il se lance dans une quête épique pour sauver le royaume d'Hyrule. Les joueurs devront résoudre des énigmes, combattre des ennemis redoutables et explorer des donjons mystérieux pour restaurer la paix dans le royaume. Avec son gameplay captivant et son histoire immersive, The Legend of Zelda: Tears of the Kingdom promet une expérience de jeu inoubliable pour les fans de la franchise.",
+      "serverStatus": "maintenance",
+      "playerData": {
+        "time": [1, 2, 3, 5, 8, 10],
+        "players": [50, 70, 90, 80, 100, 120]
+      },
+      "crashData": {
+        "time": [1, 2, 3, 5, 8, 10],
+        "reports": [1, 3, 2, 4, 1, 3]
+      }
+    },
+    {
+      "id": 3,
+      "title": "Vampire: The Masquerade - Bloodlines 2",
+      "image": "https://media.rawg.io/media/games/fb5/fb5e0fdb1f6bb0e8b5da5d08bb83a5fc.jpg",
+      "description": "Vampire: The Masquerade - Bloodlines 2 est un jeu de rôle d'action développé et publié par Hardsuit Labs. Le jeu se déroule dans un univers sombre et mystérieux où les joueurs incarnent un vampire nouvellement transformé. Ils devront naviguer dans la vie nocturne de la ville de Seattle, interagir avec d'autres vampires et factions surnaturelles, et se frayer un chemin à travers une série de quêtes complexes. Le jeu propose des choix moraux impactants, des capacités surnaturelles et une intrigue captivante qui promet de tenir les joueurs en haleine du début à la fin.",
+      "serverStatus": "online",
+      "playerData": {
+        "time": [1, 2, 3, 5, 8, 10],
+        "players": [200, 250, 300, 280, 320, 350]
+      },
+      "crashData": {
+        "time": [1, 2, 3, 5, 8, 10],
+        "reports": [3, 6, 4, 9, 2, 6]
+      }
+    },
+    {
+      "id": 4,
+      "title": "Diablo IV",
+      "image": "https://media.rawg.io/media/games/77d/77d51f8f4a07c3eecb0f8504027b1bf0.jpg",
+      "description": "Diablo IV est un jeu de rôle d'action développé et publié par Blizzard Entertainment. Le jeu est le quatrième volet de la franchise à succès Diablo et propose une expérience de jeu sombre et immersive dans un monde rempli de démons et de forces obscures. Les joueurs peuvent choisir parmi différentes classes de personnages, explorer un vaste monde ouvert, combattre des boss redoutables et relever des défis épiques. Avec son gameplay addictif et ses graphismes impressionnants, Diablo IV promet d'être un incontournable pour les fans de jeux de rôle d'action.",
+      "serverStatus": "maintenance",
+      "playerData": {
+        "time": [1, 2, 3, 5, 8, 10],
+        "players": [150, 180, 210, 190, 230, 260]
+      },
+      "crashData": {
+        "time": [1, 2, 3, 5, 8, 10],
+        "reports": [2, 4, 3, 5, 2, 4]
+      }
+    },
+    {
+      "id": 5,
+      "title": "Star Wars Jedi: Survivor",
+      "image": "https://media.rawg.io/media/games/3e4/3e43e29ae126ef951842393f5ff7f33a.jpg",
+      "description": "Star Wars Jedi: Survivor est un jeu vidéo d'action-aventure développé par Lucasfilm Games. Dans ce jeu, les joueurs incarnent un Jedi rescapé de l'Ordre 66 et se lancent dans une quête pour survivre dans l'univers de Star Wars. Ils devront utiliser leurs compétences de Jedi pour affronter des ennemis redoutables, résoudre des énigmes et découvrir des secrets cachés. Le jeu propose également un mode multijoueur où les joueurs peuvent se battre en ligne dans des combats au sabre laser intenses. Avec son histoire captivante et son gameplay immersif, Star Wars Jedi: Survivor promet une expérience inoubliable pour les fans de la franchise.",
+      "serverStatus": "online",
+      "playerData": {
+        "time": [1, 2, 3, 5, 8, 10],
+        "players": [300, 350, 400, 380, 420, 450]
+      },
+      "crashData": {
+        "time": [1, 2, 3, 5, 8, 10],
+        "reports": [4, 7, 5, 10, 3, 7]
+      }
+    },
+    {
+      "id": 6,
+      "title": "Final Fantasy XVI",
+      "image": "https://media.rawg.io/media/games/22e/22e68bb62b3013283972cecf98ed51dc.jpg",
+      "description": "Final Fantasy XVI est un jeu de rôle développé et publié par Square Enix. Le jeu se déroule dans un univers fantastique rempli de magie, de créatures mythiques et de personnages emblématiques. Les joueurs incarnent un jeune héros qui se lance dans un voyage épique pour sauver son royaume et affronter des forces maléfiques. Le jeu propose un système de combat dynamique, des quêtes passionnantes et une histoire riche en émotions. Avec son gameplay captivant et ses graphismes époustouflants, Final Fantasy XVI promet d'être un chef-d'œuvre du genre.",
+      "serverStatus": "maintenance",
+      "playerData": {
+        "time": [1, 2, 3, 5, 8, 10],
+        "players": [180, 210, 240, 220, 260, 290]
+      },
+      "crashData": {
+        "time": [1, 2, 3, 5, 8, 10],
+        "reports": [2, 4, 3, 6, 2, 4]
+      }
+    },
+    {
+      "id": 7,
+      "title": "Hollow Knight: Silksong",
+      "image": "https://media.rawg.io/media/games/27c/27cd8b7dead05a870f8a514a9a1915ad.jpg",
+      "description": "Hollow Knight: Silksong est un jeu d'action-aventure développé et publié par Team Cherry. Le jeu est la suite du célèbre Hollow Knight et met en scène Hornet, un personnage emblématique du premier jeu. Les joueurs devront explorer un nouveau royaume mystérieux, affronter des ennemis redoutables et résoudre des énigmes pour découvrir les secrets du monde. Le jeu propose de nouvelles capacités, des combats passionnants et une histoire captivante qui raviront les fans de la franchise. Avec ses graphismes envoûtants et son gameplay immersif, Hollow Knight: Silksong promet une expérience de jeu inoubliable.",
+      "serverStatus": "online",
+      "playerData": {
+        "time": [1, 2, 3, 5, 8, 10],
+        "players": [350, 400, 450, 420, 460, 490]
+      },
+      "crashData": {
+        "time": [1, 2, 3, 5, 8, 10],
+        "reports": [3, 5, 4, 7, 2, 5]
+      }
+    },
+    {
+      "id": 8,
+      "title": "Minecraft Legends",
+      "image": "https://media.rawg.io/media/games/a52/a52652c3f5e666bf0c16797ba175b034.jpg",
+      "description": "Minecraft Legends est un jeu de construction et d'aventure développé et publié par Mojang Studios. Le jeu permet aux joueurs de créer leur propre monde et d'explorer des mondes générés de manière procédurale remplis de ressources à découvrir et d'ennemis à combattre. Les joueurs peuvent construire des structures, exploiter des ressources, cultiver des cultures et interagir avec des créatures et des personnages uniques. Minecraft Legends propose également un mode multijoueur où les joueurs peuvent collaborer pour construire des mondes épiques et affronter des défis ensemble. Avec sa jouabilité infinie et son esprit créatif, Minecraft Legends est un jeu qui continue de captiver les joueurs du monde entier.",
+      "serverStatus": "offline",
+      "playerData": {
+        "time": [1, 2, 3, 5, 8, 10],
+        "players": [1000, 1200, 1500, 1300, 1600, 1800]
+      },
+      "crashData": {
+        "time": [1, 2, 3, 5, 8, 10],
+        "reports": [5, 8, 6, 12, 4, 8]
+      }
+    }
+  ]
+  

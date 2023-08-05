@@ -104,6 +104,23 @@ export default function GameCards({ filteredTerm }) {
     }
   };
   
+  // Style CardContent
+  const titleStyles = {
+    color: 'white',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+  };
+  
+  const descriptionStyles = {
+    color: 'grey',
+    maxHeight: '4em',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    display: '-webkit-box',
+    WebkitLineClamp: 3,
+    WebkitBoxOrient: 'vertical',
+  };  
 
   // FILTRE DE JEUX
   const searchTerm = filteredTerm.replace(/\s/g, ""); // Supprimer les espaces du terme de recherche
@@ -127,7 +144,7 @@ export default function GameCards({ filteredTerm }) {
                 sx={{
                   pointerEvents: 'none',
                   objectFit: 'cover',
-                  objectPosition: 'center',
+                  objectPosition: 'top center',
                   height: '200px', // La hauteur souhaitée de CardMedia
                 }}
               />
@@ -189,13 +206,20 @@ export default function GameCards({ filteredTerm }) {
             </Box>
             
             <CardContent onClick={() => handleCardClick(game.id)} sx={{ cursor: 'pointer' }}>
-              <Typography gutterBottom variant="h5" component="div" sx={{ color: 'white' }}>
+              <Typography
+                gutterBottom // Permet un margin bottom
+                variant="h5"
+                component="div"
+                sx={titleStyles}
+                title={game.title} // Afficher le titre complet au survol
+              >
                 {game.title}
               </Typography>
-              <Typography variant="body2" sx={{ color: 'grey' }}>
+              <Typography variant="body2" sx={descriptionStyles}>
                 {game.description}
               </Typography>
             </CardContent>
+
             <CardActions>
               <Button size="small" color="primary">
                 Share
