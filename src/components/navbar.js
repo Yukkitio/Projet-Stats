@@ -82,11 +82,11 @@ export default function Navbar() {
                 transform: 'translateX(-50%)',
               }}
             >
-              <StyledButton color="inherit" onClick={handleTab1Click} sx={{ marginRight: 5 }}>
+              <StyledButton color="inherit" onClick={handleTab1Click} sx={{ mr: 5 }}>
                 Game Stats
               </StyledButton>
               <Divider orientation="vertical" flexItem color="grey"/>
-              <StyledButton color="inherit" onClick={handleTab2Click} sx={{ marginLeft: 5 }}>
+              <StyledButton color="inherit" onClick={handleTab2Click} sx={{ ml: 5 }}>
                 Tournament
               </StyledButton>
             </Box>
@@ -108,11 +108,11 @@ export default function Navbar() {
           onOpen={() => setOpenDrawer(true)}
         >
           <List>
-            <ListItem button onClick={handleTab1Click}>
+            <ListItem onClick={handleTab1Click}>
               <ListItemText primary="Game Stats" />
             </ListItem>
             <Divider flexItem color="#282828"/>
-            <ListItem button onClick={handleTab2Click}>
+            <ListItem onClick={handleTab2Click}>
               <ListItemText primary="Tournament" />
             </ListItem>
           </List>

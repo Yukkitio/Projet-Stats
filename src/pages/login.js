@@ -110,7 +110,7 @@ export default function Login() {
   });
 
   return (
-    <><Container component='main' maxWidth='xs' bgcolor='green'>
+    <><Container component='main' maxWidth='xs'>
       <Box sx={{ boxShadow: 20, borderRadius: '4vh', display: "flex", mt: 16, flexDirection: "column", alignItems: "center", justifyContent: "center", background: '#282828'}}>
        
         <Typography component='h1' variant='h4' sx={{ mt: 3, mb: 3 ,color: '#686ffd' }}>S'identifier</Typography>

@@ -184,8 +184,8 @@ export default function GameCards({ filteredTerm }) {
                   height: isBoxExpanded ? '12%' : '0',
                   clipPath: 'polygon(100% 0, 100% 100%, 0 100%)',
                   background: '#0A0A0A', // Couleur barre oblique
-                  marginBottom: '-1px', // Ajouter une marge négative pour pallier au liseré non responsive
-                  marginLeft: '1px', // Ajouter une marge négative pour pallier au liseré non responsive
+                  mb: '-1px', // Ajouter une marge négative pour pallier au liseré non responsive
+                  ml: '1px', // Ajouter une marge négative pour pallier au liseré non responsive
                   cursor: "pointer", // Pour un meilleur compréhension / logique.
                   transition: 'height 0.3s ease',
                 }}
